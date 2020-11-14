@@ -1,36 +1,39 @@
 #!/usr/bin/node
 /**
- * Filter only code experience
+ * Filter only developer experience
  */
 
 const validExperiences = [ 
-  /Senior/img,
-  /\nSenior/img,
-  /Sr/ig,
-  /Head/ig,
-  /Marketing/ig,
-  /Manager/ig,
-  /Lead/ig,
-  /Director/ig,
-  /Salesforce/ig,
-  /Sales/ig,
-  /Expert/ig,
-  /Executive/ig,
-  /Communications/ig,
-  /Business/ig,
-  /Analyst/ig,
-  /Media/ig,
-  /QA/g,
-  /Experienced/ig,
-  /legal/ig,
-  /Consultant/ig,
+  /Fullstack/img,
+  /Developer/ig,
+  /Dev/ig,
+  /Software/ig,
+  /Frontend/ig,
+  /Backend/ig,
+  /Tech/ig,
+  /Devops/ig,
+  /Database/ig
 ]
 
-// Discards non related offers
-exports.filterExperience = function (experience) {
+// Return true when finds non related experience
+async function evalExperience (experience="") {
     for(let i = 0; validExperiences[i]; i++) {
       if (validExperiences[i].test(experience))
         return true;
     }
     return false;
 };
+
+exports.expFilter = async function (jobs=[]) {
+  if (jobs) {
+    const expValidated = [];
+    for (job of jobs) {
+      if (await evalExperience(job.name))
+        expValidated.push(job.name);
+    }
+    return expValidated;
+  }
+  return null;
+}
+
+
