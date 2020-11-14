@@ -31,7 +31,7 @@ exports.rankUser = async function (username="") {
       level = "Expert"
     } else if ((points > 80) && (points <= 90)) {
       level = "Hero"
-    } else if (points > 90) {
+    } else {
       level = "God"
     }
     if (points > 100) {
