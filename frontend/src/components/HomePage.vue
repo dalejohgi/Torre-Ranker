@@ -32,13 +32,6 @@ export default {
   border-radius: 8px;
   width: 100px; height: 100px;
 }
-
-.HomePage {
-  background-color: #2B2B2B;
-}
-h1 {
-  color: #D7D7D7;
-}
 </style>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

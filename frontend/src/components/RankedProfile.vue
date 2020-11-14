@@ -67,13 +67,9 @@ export default {
 .DevCard {
   margin-top: 100px;
 }
-.DevRanker {
-  background-color: #2B2B2B;
-}
 h1 {
   margin-top: 50px;
   text-align: center;
-  color: #D7D7D7;
 }
 </style>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
