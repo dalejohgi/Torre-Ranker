@@ -1,10 +1,13 @@
 <template>
   <div class="HomePage">
-    <h1>Torre Ranker</h1>
-    <form>
-      <v-text-field type="text" label="Torre Username" v-model="user" />
-    </form>
-    <v-btn color="primary" @click="onBtnClick"> Rank me! </v-btn>
+    <v-col cols="12">
+      <h1>Torre Ranker</h1>
+      <v-img class="Logo" src="https://torre-media.s3-us-west-2.amazonaws.com/subtorres/teletrabajo/torre.png" />
+      <form>
+        <v-text-field type="text" label="Torre Username" v-model="user" />
+      </form>
+      <v-btn color="lime" @click="onBtnClick"> Rank me! </v-btn>
+    </v-col>
   </div>
 </template>
 
@@ -22,5 +25,13 @@ export default {
   },
 };
 </script>
+
+<style>
+.Logo {
+  float: right;
+  border-radius: 8px;
+  width: 100px; height: 100px;
+}
+</style>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
