@@ -1,6 +1,6 @@
 # Torre Ranker.
 
-## Aplication project developed for Torre.co
+## Aplication project developed for Torre.co <img src="https://torre-media.s3-us-west-2.amazonaws.com/subtorres/teletrabajo/torre.png" alt="c" width="20" height="20"/>
 
 Torre Ranker is a web application to rank developers in Torre.co acording to the experience developing they have posted on their genoma.
 
