@@ -7,7 +7,7 @@
         <v-card-title class="headline">{{ user.name }}</v-card-title>
         <v-card-subtitle>{{ user.profession }}</v-card-subtitle>
         <v-card-text>
-          <v-row align="center" justify="space-between">
+          <v-row align="start" justify="space-between">
             <v-col cols="7">
               Great {{user.name}}! You have been ranked by our algorithm as a <b>{{user.level}}</b> according to your experience developing.
               Keep committing to become a Hero Dev someday.
@@ -21,7 +21,7 @@
                 striped
               ></v-progress-linear>
             </v-col>
-            <v-col cols="5">
+            <v-col cols="3">
               <v-img class="DevImage" :src="user.picture" />
             </v-col>
           </v-row>
