@@ -29,7 +29,7 @@ exports.expFilter = async function (jobs=[]) {
     const expValidated = [];
     for (job of jobs) {
       if (await evalExperience(job.name))
-        expValidated.push(job.name);
+        expValidated.push(job);
     }
     return expValidated;
   }

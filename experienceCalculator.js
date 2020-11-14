@@ -6,7 +6,6 @@
 // Calculates months of experience in a job
 function getExpMonths (job) {
   let fromDate = new Date(job.fromMonth + " 01, " + job.fromYear + " 00:00:00");
-  console.log(fromDate);
   fromDate = fromDate.getTime();
   let toDate = new Date(job.toMonth + " 30, " + job.toYear + " 00:00:00");
   toDate = toDate.getTime();
@@ -21,7 +20,7 @@ function getExpMonths (job) {
 }
 
 // Returns points of experience based on the number of months worked
-exports.getExpPoints = async function () {
+exports.getExpPoints = async function (jobs) {
   let totalExperience = 0;
   for (job of jobs) {
     totalExperience += getExpMonths(job);
