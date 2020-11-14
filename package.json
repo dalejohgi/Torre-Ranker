@@ -5,7 +5,8 @@
   "main": "./api/v1/app.js",
   "scripts": {
     "start:server": "nodemon ./api/v1/app.js",
-    "start": "npm run build:frontend && node ./api/v1/app.js",
+    "start": "node ./api/v1/app.js",
+    "postinstall": "npm run build:frontend",
     "serve:frontend": "vue-cli-service serve --open ./frontend/src/main.js",
     "build:frontend": "vue-cli-service build --dest api/v1/frontend ./frontend/src/main.js",
     "lint:frontend": "vue-cli-service lint ./frontend/src/main.js"
