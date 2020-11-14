@@ -1,6 +1,6 @@
 <template>
   <div class="DevRanker">
-    <h1>Dev Ranker</h1>
+    <h1>Torre Ranker</h1>
     <v-img class="Logo" src="https://torre-media.s3-us-west-2.amazonaws.com/subtorres/teletrabajo/torre.png" />
     <v-col cols="12">
       <v-card class="DevCard">
@@ -67,9 +67,13 @@ export default {
 .DevCard {
   margin-top: 100px;
 }
+.DevRanker {
+  background-color: #2B2B2B;
+}
 h1 {
   margin-top: 50px;
-  text-align: center; 
+  text-align: center;
+  color: #D7D7D7;
 }
 </style>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
