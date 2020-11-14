@@ -24,6 +24,12 @@ app.get("/api/v1/:username", (req, res) => {
     })();
 });
 
+app.get("", (req, res) => {
+  (async () => {
+
+  })
+});
+
 app.listen(3000, () => {
   console.log("Initializing on port 3000");
  });

@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import { rank } from "../functions/rank";
 export default {
   name: "HomePage",
   data: () => ({
@@ -17,11 +16,8 @@ export default {
   }),
   methods: {
     async onBtnClick() {
-      const user = await rank(this.user);
-      this.$router.push({path: '/ranked-profile',
-      props: {
-        user
-      }});
+      this.$router.push({path: `/ranked-profile/${this.user}`
+      });
     },
   },
 };

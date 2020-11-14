@@ -2,7 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import VueRouter from "vue-router";
 import HomePage from "./components/HomePage";
-import RankedCard from "./components/RankedCard";
+import RankedProfile from "./components/RankedProfile";
 import Vuetify from 'vuetify';
 import "vuetify/dist/vuetify.min.css";
 
@@ -15,16 +15,9 @@ const routes = [
     component: HomePage
   },
   {
-    path: "/ranked-profile",
-    component: RankedCard,
-  },
-  // {
-  //   path: "/job-map",
-  //   component: JobMap
-  // },
-  {
-    path: "/RankedCard",
-    component: RankedCard
+    path: "/ranked-profile/:username",
+    component: RankedProfile,
+    props: true
   }
 ];
 
