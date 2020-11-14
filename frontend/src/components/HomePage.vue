@@ -2,7 +2,7 @@
   <div class="HomePage">
     <v-col cols="12">
       <h1>Torre Ranker</h1>
-      <v-img class="Logo" src="https://torre-media.s3-us-west-2.amazonaws.com/subtorres/teletrabajo/torre.png" />
+      <v-img class="HomeLogo" src="https://torre-media.s3-us-west-2.amazonaws.com/subtorres/teletrabajo/torre.png" />
       <form>
         <v-text-field type="text" label="Torre Username" v-model="user" />
       </form>
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style>
-.Logo {
+.HomeLogo {
   float: right;
   border-radius: 8px;
   width: 100px; height: 100px;

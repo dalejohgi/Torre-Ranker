@@ -56,7 +56,8 @@ export default {
 .Logo {
   float: right;
   border-radius: 8px;
-  width: 100px; height: 100px;
+  width: 120px; height: 100px;
+  margin-right: 3rem;
 }
 .DevScore {
   text-transform: capitalize;
