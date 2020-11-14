@@ -1,0 +1,22 @@
+{
+  "name": "torre",
+  "version": "1.0.0",
+  "description": "App for Torre",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalejohgi/Torre.git"
+  },
+  "author": "David",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dalejohgi/Torre/issues"
+  },
+  "homepage": "https://github.com/dalejohgi/Torre#readme",
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
+}
