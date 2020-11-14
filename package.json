@@ -5,7 +5,7 @@
   "main": "./api/v1/app.js",
   "scripts": {
     "start:server": "nodemon ./api/v1/app.js",
-    "start": "node ./api/v1/app.js",
+    "start": "npm run build:frontend && node ./api/v1/app.js",
     "postinstall": "npm run build:frontend",
     "serve:frontend": "vue-cli-service serve --open ./frontend/src/main.js",
     "build:frontend": "vue-cli-service build --dest api/v1/frontend ./frontend/src/main.js",
@@ -22,11 +22,12 @@
   },
   "homepage": "https://github.com/dalejohgi/Torre#readme",
   "dependencies": {
+    "connect-history-api-fallback": "^1.6.0",
+    "core-js": "^3.6.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fetch": "^1.1.0",
     "node-fetch": "^2.6.1",
-    "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.4.9",
     "vuetify": "^2.2.11"

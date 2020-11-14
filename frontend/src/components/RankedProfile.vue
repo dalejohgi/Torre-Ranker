@@ -7,7 +7,7 @@
         <v-card-title class="headline">{{ user.name }}</v-card-title>
         <v-card-subtitle>{{ user.profession }}</v-card-subtitle>
         <v-card-text>
-          <v-row align="start" justify="space-between">
+          <v-row align="center" justify="space-between">
             <v-col cols="7">
               Great {{user.name}}! You have been ranked by our algorithm as a <b>{{user.level}}</b> according to your experience developing.
               Keep committing to become a Hero Dev someday.
@@ -17,7 +17,7 @@
               <v-progress-linear
                 color="light-green"
                 height="10"
-                :value="user.level"
+                :value="user.points"
                 striped
               ></v-progress-linear>
             </v-col>
@@ -51,7 +51,7 @@ export default {
 <style>
 .DevImage {
   border-radius: 8px;
-  width: 200px; height: 200px;
+  width: 300px; height: 300px;
 }
 .Logo {
   float: right;
@@ -62,6 +62,13 @@ export default {
   text-transform: capitalize;
   display: block;
   margin: 1rem 0;
+}
+.DevCard {
+  margin-top: 100px;
+}
+h1 {
+  margin-top: 50px;
+  text-align: center; 
 }
 </style>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
