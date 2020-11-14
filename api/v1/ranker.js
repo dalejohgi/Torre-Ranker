@@ -11,9 +11,9 @@ exports.rankUser = async function (username="") {
     let user = await getUser(username);
     user = JSON.parse(user);
     const validated = await expFilter(user.jobs);
-    points = await getExpPoints(validated);
+    let points = await getExpPoints(validated);
     let level = "";
-    if (points <= 10){
+    if (points <= 10) {
       level = "Baby-Dev"
     } else if ((points > 10) && (points <= 20)) {
       level = "Kiddo-Dev"
