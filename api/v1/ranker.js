@@ -12,6 +12,9 @@ exports.rankUser = async function (username="") {
     user = JSON.parse(user);
     const validated = await expFilter(user.jobs);
     let points = await getExpPoints(validated);
+    if (points >= 100) {
+      points = 99.9;
+    }
     let level = "";
     if (points <= 10) {
       level = "Baby-Dev"
@@ -33,9 +36,6 @@ exports.rankUser = async function (username="") {
       level = "Hero"
     } else {
       level = "God"
-    }
-    if (points > 100) {
-      points = 100;
     }
     user.points = points;
     user.level = level;
