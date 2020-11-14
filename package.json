@@ -2,9 +2,9 @@
   "name": "torre",
   "version": "1.0.0",
   "description": "App for Torre",
-  "main": "app.js",
+  "main": "./api/v1/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:server": "nodemon ./api/v1/app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/dalejohgi/Torre#readme",
   "dependencies": {
-    "axios": "^0.21.0"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fetch": "^1.1.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
