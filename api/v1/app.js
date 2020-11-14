@@ -3,11 +3,16 @@
  * Ranker API for Torre
  * 
  */
+const history = require('connect-history-api-fallback');
 const cors = require("cors");
 const express = require("express");
 const { rankUser } = require("./ranker");
+const { resolve } = require('path')
+
 
 const app = express();
+const staticFileMiddleware = express.static(resolve(__dirname, 'frontend'));
+const port = process.env.PORT || 3000;
 
 app.use(cors({ origin: true }));
 
@@ -24,13 +29,15 @@ app.get("/api/v1/:username", (req, res) => {
     })();
 });
 
-app.get("", (req, res) => {
-  (async () => {
+// 1st call for unredirected requests 
+app.use(staticFileMiddleware);
 
-  })
-});
+// Support history api 
+app.use("/", history({
+  index: '/frontend/index.html'
+}));
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Initializing on port 3000");
  });
  
